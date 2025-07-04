@@ -12,7 +12,6 @@ const FavoritePage = () => {
       navigate('/login');
       return;
     }
-
     const allFavs = JSON.parse(localStorage.getItem('favorites')) || {};
     const userFavs = allFavs[email] || [];
     setFavorites(userFavs);
