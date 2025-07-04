@@ -1,0 +1,179 @@
+/* Main App Container */
+.App {
+  text-align: center;
+  padding: 1rem;
+  background-color: #121212;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ✅ Header with App Title and User Info */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ✅ Favorites Button */
+.favorites-link {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  margin-left: 10px;
+}
+
+.favorites-link:hover {
+  background-color: #e60000;
+}
+
+/* ✅ Home Button */
+.home-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+  margin-left: 10px;
+}
+
+.home-button:hover {
+  background-color: #388e3c;
+}
+
+/* ✅ Logged-in Username + Logout */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.user-info button {
+  padding: 6px 12px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.user-info button:hover {
+  background-color: #e60000;
+}
+
+/* ✅ SearchBar */
+.search-bar {
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+}
+
+/* ✅ Filters Layout */
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Filter Dropdowns */
+.year-filter,
+.type-filter {
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #1f1f1f;
+  color: white;
+}
+
+/* ✅ Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ✅ Movie Card */
+.movie-card {
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ✅ Favorite Buttons */
+.fav-button-add,
+.fav-button-remove {
+  margin-top: 10px;
+  padding: 6px 10px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+/* ❤️ Add to Favorites Button */
+.fav-button-add {
+  background-color: #ff4d4d;
+}
+.fav-button-add:hover {
+  background-color: #e60000;
+}
+
+/* 🗑 Remove from Favorites Button */
+.fav-button-remove {
+  background-color: #555;
+}
+.fav-button-remove:hover {
+  background-color: #b30000;
+}
+
+/* ✅ Responsive: Smaller devices */
+@media (max-width: 600px) {
+  .search-bar {
+    width: 90%;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .user-info {
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
